@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<title>Taxi booking form</title>
+<h2> Taxi booking form</h2>
+<form name="myform">
+Name
+<input type="text" name="customer_name" required>
+<br>
+<br>
+
+Phone
+<input type="tel" name="phone_number">
+<br>
+ <br>
+
+Email
+<input type="email" name="email_address">
+<br>
+ <br>
+Which taxi do you require? <br> <br>
+<input type="radio" name="taxi" required value="car"> Car <br>
+<p><label> <input type="radio" name="taxi" required value="van"> Van <br>
+<p><label> <input type="radio" name="taxi" required value="tuktuk"> Tuk Tuk <br>
+<p>Extras</p>
+<p><label> <input type="checkbox" name="extras" value="baby"> Baby Seat </label></p>
+<p><label> <input type="checkbox" name="extras"value="wheelchair"> Wheelchair Access
+</label></p>
+<p><label> <input type="checkbox" name="extras" value="tip"> Stock Tip </label></p>
+Pickup Date/Time
+<input type="datetime-local" name="pickupTime" required>
+<br>
+ <br>
+Pickup Place
+<select id="pickup_place" name="pickup_place">
+<option value="" selected="selected">Select One</option>
+<option value="office" >Taxi Office</option>
+<option value="town_hall" >Town Hall</option>
+<option value="telepathy" >We'll Guess!</option>
+</select>
+<br>
+ <br>
+Dropoff Place
+<input type="text" name="dropoff_place" required list="destinations">
+<datalist id="destinations">
+<option value="Airport">
+<option value="Beach">
+<option value="Fred Flinstone's House">
+</datalist>
+<br>
+ <br>
+Special Instructions
+<textarea name="comments" maxlength="500"></textarea>
+<p><button>Submit Booking</button></p>
+</form>
